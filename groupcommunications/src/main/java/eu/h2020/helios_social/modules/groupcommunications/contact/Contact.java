@@ -2,6 +2,8 @@ package eu.h2020.helios_social.modules.groupcommunications.contact;
 
 import androidx.annotation.Nullable;
 
+import eu.h2020.helios_social.modules.groupcommunications.utils.ContactId;
+
 public abstract class Contact {
     private final ContactId id;
     private final String nickname;

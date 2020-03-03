@@ -1,6 +1,6 @@
 package eu.h2020.helios_social.modules.groupcommunications;
 
-import eu.h2020.helios_social.modules.groupcommunications.contact.ContactId;
+import eu.h2020.helios_social.modules.groupcommunications.utils.ContactId;
 import eu.h2020.helios_social.modules.groupcommunications.utils.GroupId;
 
 public class Forum extends Group {
