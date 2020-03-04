@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -27,6 +27,7 @@ android {
 configurations.all {
     resolutionStrategy.dependencySubstitution {
         substitute module("eu.h2020.helios_social.core.contextualegonetwork:contextualegonetwork") with project(':contextualegonetwork')
+        substitute module("eu.h2020.helios_social.core.profile:profile") with project(':profile')
     }
 }
 
@@ -38,5 +39,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    implementation 'com.github.javafaker:javafaker:1.0.2'
     implementation project(':contextualegonetwork')
+    implementation project(':profile')
 }

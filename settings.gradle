@@ -1,2 +1,5 @@
-include ':app', ':groupcommunications'
+include ':app', ':groupcommunications', ':contextualegonetwork', ':profile', ':security'
+project(':contextualegonetwork').projectDir = new File("../ContextualEgoNetwork/lib")
+project(':profile').projectDir = new File("../profile/lib")
+project(':security').projectDir = new File("../security/lib")
 rootProject.name='GroupCommunications'
