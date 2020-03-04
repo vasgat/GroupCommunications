@@ -1,7 +1,7 @@
 package eu.h2020.helios_social.modules.groupcommunications;
 
 
-import eu.h2020.helios_social.modules.groupcommunications.utils.ContactId;
+import eu.h2020.helios_social.modules.groupcommunications.utils.PeerId;
 import eu.h2020.helios_social.modules.groupcommunications.utils.GroupId;
 
 /**
@@ -11,7 +11,7 @@ public class SecretForum extends Group {
 
     private String name;
     private final byte[] salt;
-    private final ContactId owner;
+    private final PeerId owner;
 
     /**
      * Contracts a new instance of SecretForum
@@ -20,7 +20,7 @@ public class SecretForum extends Group {
      * @param owner owner/creator of the SecretForum (cannot change)
      * @param salt
      */
-    public SecretForum(GroupId id, String name, ContactId owner, byte[] salt) {
+    public SecretForum(GroupId id, String name, PeerId owner, byte[] salt) {
         super(id);
         this.name = name;
         this.owner = owner;
@@ -41,9 +41,9 @@ public class SecretForum extends Group {
 
     /**
      * Get Peer Identifier of Forum Owner
-     * @return Contact Identifier
+     * @return Peer Identifier
      */
-    public ContactId getOwner() {
+    public PeerId getOwner() {
         return owner;
     }
 

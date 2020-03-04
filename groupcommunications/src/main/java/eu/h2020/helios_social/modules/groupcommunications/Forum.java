@@ -2,7 +2,7 @@ package eu.h2020.helios_social.modules.groupcommunications;
 
 import androidx.annotation.Nullable;
 
-import eu.h2020.helios_social.modules.groupcommunications.utils.ContactId;
+import eu.h2020.helios_social.modules.groupcommunications.utils.PeerId;
 import eu.h2020.helios_social.modules.groupcommunications.utils.GroupId;
 
 /**
@@ -12,7 +12,7 @@ public class Forum extends Group {
 
     private String name;
     private final byte[] salt;
-    private ContactId administrator;
+    private PeerId administrator;
 
     /**
      * Creates a sharable Forum with a given name and salt
@@ -21,7 +21,7 @@ public class Forum extends Group {
      * @param administrator Peer Identifier of the administrator of the forum (admin can be change)
      * @param salt
      */
-    public Forum(GroupId id, String name, @Nullable ContactId administrator, byte[] salt) {
+    public Forum(GroupId id, String name, @Nullable PeerId administrator, byte[] salt) {
         super(id);
         this.name = name;
         this.administrator = administrator;
@@ -44,16 +44,16 @@ public class Forum extends Group {
      * Returns the Peer Identifier of the Peer with administrator rights
      * @return
      */
-    public ContactId getForumOwner() {
+    public PeerId getForumOwner() {
         return administrator;
     }
 
     /**
      * Updates administator of the Forum
-     * @param contactId
+     * @param peerId
      */
-    public void setForumOwner(@Nullable ContactId contactId) {
-        this.administrator = contactId;
+    public void setForumOwner(@Nullable PeerId peerId) {
+        this.administrator = peerId;
     }
 
     /**
