@@ -9,7 +9,7 @@ import eu.h2020.helios_social.modules.groupcommunications.utils.GroupId;
  */
 public class ForumManagerImpl implements ForumManager {
 
-    public ForumManagerImpl(ForumManager forumManager /*more variables are expected in the final version of ForumManagerImpl constructor*/) {
+    public ForumManagerImpl(ForumFactoryImpl forumFactory /*more variables are expected in the final version of ForumManagerImpl constructor*/) {
         throw new UnsupportedOperationException("Not supported yet");
     }
 
