@@ -6,7 +6,7 @@ import eu.h2020.helios_social.core.contextualegonetwork.Node;
 import eu.h2020.helios_social.modules.groupcommunications.utils.PeerId;
 
 /**
- *
+ * This class implements a peer.
  */
 public class Peer {
     private final PeerId id;
