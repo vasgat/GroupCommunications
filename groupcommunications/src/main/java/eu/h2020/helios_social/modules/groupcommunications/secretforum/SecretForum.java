@@ -1,6 +1,7 @@
-package eu.h2020.helios_social.modules.groupcommunications;
+package eu.h2020.helios_social.modules.groupcommunications.secretforum;
 
 
+import eu.h2020.helios_social.modules.groupcommunications.Group;
 import eu.h2020.helios_social.modules.groupcommunications.utils.PeerId;
 import eu.h2020.helios_social.modules.groupcommunications.utils.GroupId;
 
