@@ -4,10 +4,6 @@
 
 The Group Communication API offers a set of functionalities for handling one-on-one and group communications.
 
-The Content Aware Profile Manager handles the creation of the users' interests profiles as well as the matching between users. With a user's available image collection as input, the manager can construct their interests profile using a deep learning algorithm. Futhermore, the manager can provide a metric on the quality of the match between two users based on their constructed interests profile.
-
-HELIOS Content Aware Profiling API is one of the HELIOS Module APIs.
-
 ## API usage ##
 
 See javadocs in [javadocs.zip](javadoc/javadocs.zip).
