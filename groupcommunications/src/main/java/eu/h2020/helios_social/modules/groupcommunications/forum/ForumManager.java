@@ -1,4 +1,4 @@
-package eu.h2020.helios_social.modules.groupcommunications;
+package eu.h2020.helios_social.modules.groupcommunications.forum;
 
 import java.util.Collection;
 
@@ -47,4 +47,11 @@ public interface ForumManager {
      * @return s collection of Forum Member
      */
     Collection<ForumMember> getForumMembers(GroupId groupId);
+
+    /**
+     * Returns user role in the given forum
+     * @param groupId
+     * @return
+     */
+    ForumMemberRole getRole(GroupId groupId);
 }

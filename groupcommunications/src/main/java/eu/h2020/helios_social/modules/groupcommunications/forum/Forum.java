@@ -1,7 +1,8 @@
-package eu.h2020.helios_social.modules.groupcommunications;
+package eu.h2020.helios_social.modules.groupcommunications.forum;
 
 import androidx.annotation.Nullable;
 
+import eu.h2020.helios_social.modules.groupcommunications.Group;
 import eu.h2020.helios_social.modules.groupcommunications.utils.PeerId;
 import eu.h2020.helios_social.modules.groupcommunications.utils.GroupId;
 
@@ -49,7 +50,7 @@ public class Forum extends Group {
     }
 
     /**
-     * Updates administator of the Forum
+     * Updates administrator of the Forum
      * @param peerId
      */
     public void setForumOwner(@Nullable PeerId peerId) {

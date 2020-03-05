@@ -1,4 +1,4 @@
-package eu.h2020.helios_social.modules.groupcommunications;
+package eu.h2020.helios_social.modules.groupcommunications.forum;
 
 import androidx.annotation.Nullable;
 
