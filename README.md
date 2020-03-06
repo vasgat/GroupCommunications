@@ -24,6 +24,8 @@ conversationManager.addingContact(contactPeer);
 Collection<Message> conversation = conversationManager.getAllMessages(contactPeer.getId());
 //deletes all messages related with the given peer
 conversationManager.deleteAllMessages(contactPeer.getId());
+//returns the private conversation identifier with the given peer
+GroupId conversationId = conversationManager.getConversationId(anotherPeer);
 ```
 
 ### ForumManager ###
@@ -63,6 +65,20 @@ forumManager.joinsSecretForum(anotherForum);
 forumManager.deletesSecretForum(anotherForum);
 ```
 
+### Group ###
+
+`Group` can be considered as an independent synchonization scope that includes one or more peers. `Forum`s, `SecretForum`s extend `Group` class that have more specific properties. `GroupId` represents group's Identifier
+
+```java
+Group group = new Group(groupId);
+```
+
+### Message ###
+`Message` object represents a message shared in a specific `Group` (sychronization scope). `MessageBody` represents the body of the message (can be text/attachment/anything else). `MessageId` represents message's Identifier
+
+```java
+Message message = new Message(messageId, group.getId(), timestamp, messageBody);
+```
 
 ## Android Studio project structure ##
 
