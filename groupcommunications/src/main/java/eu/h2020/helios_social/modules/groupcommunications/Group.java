@@ -5,7 +5,7 @@ import eu.h2020.helios_social.modules.groupcommunications.utils.GroupId;
 /**
  * A Group can be considered an independent synchronization scope
  */
-public abstract class Group {
+public class Group {
 
     protected GroupId id;
 
