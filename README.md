@@ -20,7 +20,7 @@ This module depends on several Helios Core Modules found under eu.h2020.helios_s
 `PrivateConversationManager` is responsible for handling one-on-one communications. Some usage examples can be found below.
 
 ```java
-PrivateConversationManager conversationManager = new PrivateConversationManager();
+PrivateConversationManager conversationManager = new PrivateConversationManagerImpl();
 //this method is called when a peer is added as a contact to create a new Group (groups are explained below)
 conversationManager.addingContact(contactPeer);
 //return all conversation Message(s) with the given peer
@@ -36,7 +36,7 @@ GroupId conversationId = conversationManager.getConversationId(anotherPeer);
 `ForumManager` is responsible for handling group conversations that can be considered public and they can be shared. Four different roles are supported: administrator, moderator, participant & blocked. `ForumFactory` is responsible for creating `Forum` instances and is given as input to the constructor of `ForumManager`. Some usage examples can be found below.
 
 ```java
-ForumManagerImpl forumManager = new ForumManagerImpl(new ForumFactoryImpl());
+ForumManager forumManager = new ForumManagerImpl(new ForumFactoryImpl());
 //Create a new forum with the given name
 Forum forum = forumManager.addForum("Helios Developers");
 //Return user role in the given forum
@@ -55,7 +55,7 @@ forumManager.unsubcribesFromForum(anotherForum);
 `SecretForumManager` is responsible for handling private group conversations that can not be shared. The creator of the `SecretForum` is the administrator and decides who is blocked and the only peer that can invite new participants and delete the conversation. `SecretForumFactory` is responsible for creating `SecretForum` instances and it is given as input to the constructor of `SecretForumManager`. Some usage examples can be found below.
 
 ```java
-SecretForumManagerImpl secretForumManager = new SecretForumManagerImpl(new SecretForumFactoryImpl());
+SecretForumManager secretForumManager = new SecretForumManagerImpl(new SecretForumFactoryImpl());
 //Create a new secret forum with the given name
 SecretForum secretForum = secretForumManager.addSecretForum("Helios WP5 Task Leaders");
 //Returns all secret forums the peer is a member too
@@ -67,6 +67,20 @@ forumManager.joinsSecretForum(anotherForum);
 //deletes the given Secret Forum from his/her conversations
 forumManager.deletesSecretForum(anotherForum);
 ```
+
+### SharingManager ###
+`SharingManager` is responsible for handling sharing of different types communications (`Forum`s, `SecretForum`s). Some usage examples can be found below.  
+
+```java
+SharingManager sharingManager = new SharingManagerImpl();
+//sends an invitation to share the given group with the given peer
+sharingManager.sendInvitation(forum.getId(), contactPeer.getId(), "I would like to invite you to this cool forum", timestamp);
+//peer's response to group invitation
+sharingManager.respondToInvitation(forum.getId(), peer.getId(), true);
+//returns the peer Identifiers of the contacts the given group is shared with
+Collection<PeerId> sharedToPeers = sharingManager.isSharedWith(forum.getId());
+```
+
 
 ### Group ###
 
