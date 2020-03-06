@@ -14,11 +14,22 @@ This module depends on several Helios Core Modules found under eu.h2020.helios_s
 
 ### PrivateConversationManager ###
 
+`PrivateConversationManager` is responsible for handling one-on-one communications. Some usage examples can be found below.
+
+```
+PrivateConversationManager conversationManager = new PrivateConversationManager();
+//this method is called when a peer is added as a contact to create a new Group (groups are explained below)
+conversationManager.addingContact(contactPeer);
+//return all conversation Message(s) with the given peer
+Collection<Message> conversation = conversationManager.getAllMessages(contactPeer.getId());
+//deletes all messages related with the given peer
+conversationManager.deleteAllMessages(contactPeer.getId());
+```
+
 ### ForumManager ###
 
 `ForumManager` is responsible for handling group conversations that can be considered public and they can be shared. Four different roles are supported: administrator, moderator, participant & blocked. `ForumFactory` is responsible for creating `Forum` instances and is given as input to the constructor of `ForumManager`. Some usage examples can be found below.
 
-For example,
 ```java
 ForumManagerImpl forumManager = new ForumManagerImpl(new ForumFactoryImpl());
 //Create a new forum with the given name
@@ -38,7 +49,6 @@ forumManager.unsubcribesFromForum(anotherForum);
 ### SecretForumManager ###
 `SecretForumManager` is responsible for handling private group conversations that can not be shared. The creator of the `SecretForum` is the administrator and decides who is blocked and the only peer that can invite new participants and delete the conversation. `SecretForumFactory` is responsible for creating `SecretForum` instances and it is given as input to the constructor of `SecretForumManager`. Some usage examples can be found below.
 
-For example,
 ```java
 SecretForumManagerImpl secretForumManager = new SecretForumManagerImpl(new SecretForumFactoryImpl());
 //Create a new secret forum with the given name
@@ -51,11 +61,6 @@ Set<SecretForumMember> secretForumMembers = secretForumManager.getSecretForumMem
 forumManager.joinsSecretForum(anotherForum);
 //deletes the given Secret Forum from his/her conversations
 forumManager.deletesSecretForum(anotherForum);
-```
-
-For example,
-```
-TODO
 ```
 
 
