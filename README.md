@@ -17,7 +17,7 @@ This module depends on several Helios Core Modules found under eu.h2020.helios_s
 ### ForumManager ###
 
 For example,
-```
+```java
 ForumManagerImpl forumManager = new ForumManagerImpl(new ForumFactoryImpl());
 //Create a new forum with the given name
 Forum forum = forumManager.addForum("Helios Developers");
