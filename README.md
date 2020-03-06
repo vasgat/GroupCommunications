@@ -2,23 +2,22 @@
 
 ## Introduction ##
 
-The Group Communication API offers a set of functionalities for handling one-on-one and group communications.
+The Group Communication API offers a set of functionalities for handling one-on-one and group communications over the p2p Helios network. It offers a Decentralized Group Management Protocol and supports different types of Groups (Forums & Secret Forums) and role assignment and management.
 
 ## API usage ##
 
 See javadocs in [javadocs.zip](javadoc/javadocs.zip).
 
-
 ### Dependencies ###
 
-This module (will) depend(s) on all Helios Core Modules found under eu.h2020.helios_social.core and on serveral extension modules found under eu.h2020.helios_social.core
+This module depends on several Helios Core Modules found under eu.h2020.helios_social.core.
 
+### PrivateConversationManager ###
 
 ### ForumManager ###
 
 ### SecretForumManager ###
 
-### PrivateConversationManager ###
 
 For example,
 ```
