@@ -1,12 +1,14 @@
 # Helios Group Communications API #
 
+!! This is a first version of Helios Group Communications API. Implementation is missing at this point. 
+
 ## Introduction ##
 
 The Group Communication API offers a set of functionalities for handling one-on-one and group communications over the p2p Helios network. It offers a Decentralized Group Management Protocol and supports different types of Groups (Forums & Secret Forums) and role assignment and management.
 
 ## API usage ##
 
-See javadocs in [javadocs.zip](javadoc/javadocs.zip).
+See javadocs in javadoc directory
 
 ### Dependencies ###
 
