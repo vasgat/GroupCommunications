@@ -16,7 +16,7 @@ This module depends on several Helios Core Modules found under eu.h2020.helios_s
 
 `PrivateConversationManager` is responsible for handling one-on-one communications. Some usage examples can be found below.
 
-```
+```java
 PrivateConversationManager conversationManager = new PrivateConversationManager();
 //this method is called when a peer is added as a contact to create a new Group (groups are explained below)
 conversationManager.addingContact(contactPeer);
