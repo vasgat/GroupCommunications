@@ -1,6 +1,6 @@
 # Helios Group Communications API #
 
-:warning: This is a first version of Helios Group Communications API. Implementation is missing at this point. 
+| :warning: WARNING: This is a first version of Helios Group Communications API. Implementation is missing at this point. |
 
 ## Introduction ##
 
