@@ -16,6 +16,8 @@ This module depends on several Helios Core Modules found under eu.h2020.helios_s
 
 ### ForumManager ###
 
+`ForumManager` is responsible for handling group conversations that can be considered public. Four different roles are supported: administrator, moderator, participant & blocked. `ForumFactory` is responsible for creating `Forum` instances and is given as input to the constructor of `ForumManager`. Some usage examples can be found below.
+
 For example,
 ```java
 ForumManagerImpl forumManager = new ForumManagerImpl(new ForumFactoryImpl());
