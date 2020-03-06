@@ -29,6 +29,10 @@ ForumMemberRole role = forumManager.getRole(forum.getId());
 Set<Forum> subscribedForums = forumManager.getAllForums();
 //Returns all forumMembers of the given forum
 Set<ForumMember> forumMembers = forumManager.getForumMembers(forum.getId());
+//subcribes to the given forum
+forumManager.subscribeToForum(anotherForum);
+//unsubscribed from the given forum
+forumManager.unsubcribesFromForum(anotherForum);
 ```
 
 ### SecretForumManager ###
