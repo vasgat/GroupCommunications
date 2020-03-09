@@ -22,7 +22,7 @@ This module depends on several Helios Core Modules found under eu.h2020.helios_s
 ```java
 PrivateConversationManager conversationManager = new PrivateConversationManagerImpl();
 //this method is called when a peer is added as a contact to create a new Group (groups are explained below)
-conversationManager.addingContact(contactPeer);
+Group conversation = conversationManager.addingContact(contactPeer);
 //return all conversation Message(s) with the given peer
 Collection<Message> conversation = conversationManager.getAllMessages(contactPeer.getId());
 //deletes all messages related with the given peer
